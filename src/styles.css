@@ -1,0 +1,112 @@
+:root {
+    --color1: #8488f5;
+    --color2: #3d43b4;
+    --color3: #041348;
+    --color4: #083e12;
+    --color5: #1afe49;
+    --color6: #1e1e1e;
+    --color7: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, var(--color1), var(--color2));
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drum-machine {
+    background: var(--color6);
+    width: 75vw;
+    height: 65vw;
+    max-width: 700px;
+    max-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}
+
+.display-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.display-screen {
+    width: 40%;
+    height: calc(65vw * .1);
+    max-height: 50px;
+    background: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(22, 22, 22);
+}
+
+.display {
+    width: 100%;
+    text-align: center;
+    color: var(--color5);
+    font-size: 30px;
+}
+
+.drum-pad-container {
+    background: var(--color6);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50vw;
+    height: 50vw;
+    max-width: 450px;
+    max-height: 450px;
+    margin-top: ;
+}
+
+.drum-pad {
+    background: var(--color2);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 2px;
+    box-shadow: 0px 4px #1b1e50;
+    transition: .1s;
+}
+
+.drum-pad.active {
+    background: #262a74;
+}
+
+@media (max-width: 600px) {
+    .drum-machine {
+        width: 100vw;
+        height: 90vw;
+    }
+    
+    .drum-pad-container {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .drum-pad,
+    .display {
+        font-size: 20px;
+    }
+}
